@@ -77,7 +77,7 @@ export default class Cell extends Component {
 #Options
    Option   |   Description   |   Default Value   | required
    --- | --- | --- | ---
-   component   |   Component to render each cell item  |   Rectangle box of 100*100 | optional
+   component   |   Component to render each cell item  |   Rectangle box of 100*100 | required
    dataSource  |   Data source for list |  - | required
    selectionMode | Boolean props to decide whether to enable selection mode | true | optional
    selectIcon | icon to be display to show item selection | checkmark  | optional
