@@ -27,7 +27,7 @@ export default class Collection extends Component {
     rightButtonTitle:'Done',
     barTextColor:'white',
     barColor:'black',
-    selectIcon:require('./images/check.png'),
+    selectIcon:require('./check.png'),
     cellSize:{height:100, width:100},
 
 
