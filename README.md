@@ -10,6 +10,9 @@ One of the easiest way  of creating list and collection or grid view for both an
 
 
 #Screenshot
+![][https://github.com/tigerraj32/react-native-collection/blob/master/screenshot/1.png]
+![][https://github.com/tigerraj32/react-native-collection/blob/master/screenshot/2.png]
+![][https://github.com/tigerraj32/react-native-collection/blob/master/screenshot/3.png]
 
 #Snippet
 

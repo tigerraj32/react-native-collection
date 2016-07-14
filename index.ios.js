@@ -40,7 +40,7 @@ class Example extends Component {
         <Collection component={Cell}
                         dataSource={dataSource}
                         selectionMode={true}
-                        selectIcon={require('./check.png')}
+                        selectIcon={require('./send.png')}
                         tapHandler={this.tapHandler}
                         cellSize={
                                   {
