@@ -25,8 +25,10 @@ One of the easiest way  of creating list and collection or grid view for both an
 ![](https://github.com/tigerraj32/react-native-collection/blob/master/screenshot/1.png)
 ![](https://github.com/tigerraj32/react-native-collection/blob/master/screenshot/2.png)
 ![](https://github.com/tigerraj32/react-native-collection/blob/master/screenshot/3.png)
+
 #Snippet
-`<Collection component={Cell}
+```
+<Collection component={Cell}
                 dataSource={dataSource}
                 selectionMode={true}
                 selectIcon={require('./send.png')}
@@ -53,8 +55,8 @@ One of the easiest way  of creating list and collection or grid view for both an
                                 icon:require('./send.png')
                               }
                           }
-
-                        } />`
+                        } />
+```
 
 #Options
    Option   |   Description   |   Default Value   |
