@@ -26,7 +26,35 @@ One of the easiest way  of creating list and collection or grid view for both an
 ![](https://github.com/tigerraj32/react-native-collection/blob/master/screenshot/2.png)
 ![](https://github.com/tigerraj32/react-native-collection/blob/master/screenshot/3.png)
 #Snippet
+`<Collection component={Cell}
+                dataSource={dataSource}
+                selectionMode={true}
+                selectIcon={require('./send.png')}
+                tapHandler={this.tapHandler}
+                cellSize={
+                          {
+                            height:100,
+                            width:100
+                          }
+                         }
+                actions={
+                          {cancel:
+                            {
+                              type:'text',
+                              title:'Dismiss',
+                              handler:this.leftHandler,
+                              //icon:require('/send.png')
+                            },
+                           done:
+                              {
+                                //type:'text',
+                                //title:'Done',
+                                handler:this.rightHandler,
+                                icon:require('./send.png')
+                              }
+                          }
 
+                        } />`
 
 #Options
    Option   |   Description   |   Default Value   |
