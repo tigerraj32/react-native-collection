@@ -30,4 +30,5 @@ One of the easiest way  of creating list and collection or grid view for both an
 
 #Options
    Option   |   Description   |   Default Value   |
+   --- | --- | ---
    component   |   Collection View Cell item Component   |   Rectangle box of 100*100
