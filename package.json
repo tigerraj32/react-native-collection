@@ -8,6 +8,7 @@
   "dependencies": {
     "react": "15.2.1",
     "react-native": "0.29.0",
+    "react-native-collection": "^2.0.0",
     "react-native-grid-view": "^0.4.1"
   }
 }

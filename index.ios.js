@@ -11,7 +11,8 @@ import {
   Text,
   View
 } from 'react-native';
-import SelectableList from './selectable-list';
+
+import Collection from 'react-native-collection';
 import Cell from './cell-item';
 
 var dataSource = ['1','2','3'];
@@ -31,15 +32,15 @@ class Example extends Component {
   rightHandler(param: Object){
     console.log('right button clicked: ' + param);
   }
-  
+
   render() {
     console.log(JSON.stringify(this.props));
     return (
       <View style={styles.container}>
-        <SelectableList component={Cell}
+        <Collection component={Cell}
                         dataSource={dataSource}
                         selectionMode={true}
-                        selectIcon={require('./images/check.png')}
+                        selectIcon={require('./send.png')}
                         tapHandler={this.tapHandler}
                         cellSize={
                                   {
@@ -53,14 +54,14 @@ class Example extends Component {
                                       type:'text',
                                       title:'Dismiss',
                                       handler:this.leftHandler,
-                                      //icon:require('./images/check.png')
+                                      //icon:require('/send.png')
                                     },
                                    done:
                                       {
-                                        type:'text',
+                                        //type:'text',
                                         //title:'Done',
                                         handler:this.rightHandler,
-                                        icon:require('./images/check.png')
+                                        icon:require('./send.png')
                                       }
                                   }
 
