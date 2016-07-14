@@ -31,4 +31,10 @@ One of the easiest way  of creating list and collection or grid view for both an
 #Options
    Option   |   Description   |   Default Value   |
    --- | --- | ---
-   component   |   Collection View Cell item Component   |   Rectangle box of 100*100
+   component   |   Component to render each cell item  |   Rectangle box of 100*100
+   dataSource  |   Data source for list |  -
+   selectionMode | Boolean props to decide whether to enable selection mode | true
+   selectIcon | icon to be display to show item selection | checkmark
+   cellSize |  size of each cell item in collection view | {height:100, width:100}
+   tapHandler | callback handler in normal mode while tapping cell item | -
+   actions | two action during selection mode (Cancel and Done ). Can decide between text mode or icon mode to represent cancel and done. Can pass callback handler for each action | -
