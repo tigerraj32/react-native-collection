@@ -1,0 +1,32 @@
+{
+  "name": "react-native-collection",
+  "version": "2.0.0",
+  "description": "One of the easiest way  of creating list and collection or grid view for both android and iOS. It's even more easier to handle cell selection. This module is specifically created for making your life easier when you need an implementation of multiselect items from the list or collection.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tigerraj32/react-native-collection.git"
+  },
+  "keywords": [
+    "list",
+    "collection",
+    "cell",
+    "selection",
+    "multiselect",
+    "collection",
+    "gallary",
+    "checkbox"
+  ],
+  "author": "rajan twanabashu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tigerraj32/react-native-collection/issues"
+  },
+  "homepage": "https://github.com/tigerraj32/react-native-collection#readme",
+  "dependencies": {
+    "react-native-grid-view": "^0.4.1"
+  }
+}
