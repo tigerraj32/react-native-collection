@@ -75,12 +75,12 @@ export default class Cell extends Component {
 }
 ```
 #Options
-   Option   |   Description   |   Default Value   |
-   --- | --- | ---
-   component   |   Component to render each cell item  |   Rectangle box of 100*100
-   dataSource  |   Data source for list |  -
-   selectionMode | Boolean props to decide whether to enable selection mode | true
-   selectIcon | icon to be display to show item selection | checkmark
-   cellSize |  size of each cell item in collection view | {height:100, width:100}
-   tapHandler | callback handler in normal mode while tapping cell item | -
-   actions | two action during selection mode (Cancel and Done ). Can decide between text mode or icon mode to represent cancel and done. Can pass callback handler for each action | -
+   Option   |   Description   |   Default Value   | required
+   --- | --- | --- | ---
+   component   |   Component to render each cell item  |   Rectangle box of 100*100 | optional
+   dataSource  |   Data source for list |  - | required
+   selectionMode | Boolean props to decide whether to enable selection mode | true | optional
+   selectIcon | icon to be display to show item selection | checkmark  | optional
+   cellSize |  size of each cell item in collection view | {height:100, width:100}  | optional
+   tapHandler | callback handler in normal mode while tapping cell item | -  | required
+   actions | two action during selection mode (Cancel and Done ). Can decide between text mode or icon mode to represent cancel and done. Can pass callback handler for each action | - | required
