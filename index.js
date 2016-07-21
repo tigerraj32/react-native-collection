@@ -132,23 +132,22 @@ export default class Collection extends Component {
   render(){
 
     console.log('---------------' + JSON.stringify(this.props));
-
     const itemsPerRow = Math.floor(this.state.layout.width/this.props.cellSize.width);
     if (this.props.dataSource==null) throw new Error(Strings.DATA_SOURCE);
 
     return(
-      <View style={{flex:1,top:22}}>
-        <View style={{flex:1, top:this.state.editMode?this.props.barHeight:0}}>
+      <View style={{flex:1,top:10}}>
+
         <GridView
           items={this.props.dataSource}
           itemsPerRow={itemsPerRow}
           renderItem={this.renderItem}/>
-        </View>
+
 
         {renderIf(this.state.editMode)(
             <View style={{
-                          height:this.props.barHeight, width:this.state.layout.width, top:0,
-                          backgroundColor:'blue', position:'absolute',
+                          height:this.props.barHeight, width:this.state.layout.width,
+                          backgroundColor:'rgba(0,0,0,0.7)',
                           alignItems:'center',flexDirection:'row', justifyContent:'space-between'
                         }}>
               <TouchableHighlight onPress={()=>this.cancelHandler()}>
