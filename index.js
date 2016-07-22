@@ -33,7 +33,7 @@ export default class Collection extends Component {
 
   }
   componentDidMount(){
-      console.log('-*----------------------------- '+ JSON.stringify(this.props));
+      //console.log('-*----------------------------- '+ JSON.stringify(this.props));
   }
   constructor(props){
     super(props);
@@ -73,7 +73,7 @@ export default class Collection extends Component {
   }
 
   longPressHandler(obj: Object){
-    console.log('/*/*/*/*/ long tap SelectableList */*/*/*/ item: '+ obj);
+    //console.log('/*/*/*/*/ long tap SelectableList */*/*/*/ item: '+ obj);
     if (this.props.selectionMode) {
       this.setState({
         editMode:!this.state.editMode,
@@ -88,7 +88,7 @@ export default class Collection extends Component {
     var selectedItems = this.state.selectedItems;
     const flag = selectedItems.indexOf(item)>=0?true:false;
     const id = this.props.dataSource.indexOf(item);
-    console.log('/*/*/*/*/ SelectableList */*/*/*/ item: '+item);
+    //console.log('/*/*/*/*/ SelectableList */*/*/*/ item: '+item);
 
     return (
       <CellGrid item={item} key={id}
@@ -131,7 +131,7 @@ export default class Collection extends Component {
 
   render(){
 
-    console.log('---------------' + JSON.stringify(this.props));
+    //console.log('---------------' + JSON.stringify(this.props));
     const itemsPerRow = Math.floor(this.state.layout.width/this.props.cellSize.width);
     if (this.props.dataSource==null) throw new Error(Strings.DATA_SOURCE);
 
