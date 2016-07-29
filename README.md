@@ -84,5 +84,5 @@ export default class Cell extends Component {
    cellSize |  size of each cell item in collection view | {height:100, width:100}  | optional
    tapHandler | callback handler in normal mode while tapping cell item | -  | required
    actions | two action during selection mode (Cancel and Done ). Can decide between text mode or icon mode to represent cancel and done. Can pass callback handler for each action | - | required
-   onEndReached | handler to notify ScrollView have reached to end of the view. ** pass the onEndReached={this.props.onEndReached} props to GridView ** |  - | optional
+   onEndReached | handler to notify ScrollView have reached to end of the view. ** pass the onEndReached={this.props.onEndReached} props to ListView of  GridView ** |  - | optional
    barBottomPosition | action bar bottom offset value | 0 | optional
