@@ -21,6 +21,7 @@ export default class Collection extends Component {
 
 
   static defaultProps={
+    barBottomPosition:0,
     barHeight:60,
     leftButtonTitle:'Cancel',
     leftButtonTitle:'Cancel',
@@ -136,11 +137,12 @@ export default class Collection extends Component {
     if (this.props.dataSource==null) throw new Error(Strings.DATA_SOURCE);
 
     return(
-      <View style={{flex:1,top:10}}>
+      <View style={{flex:1,top:0, height:this.state.layout.height}}>
 
         <GridView
           items={this.props.dataSource}
           itemsPerRow={itemsPerRow}
+          onEndReached={this.props.onEndReached}
           renderItem={this.renderItem}/>
 
 
@@ -148,6 +150,8 @@ export default class Collection extends Component {
             <View style={{
                           height:this.props.barHeight, width:this.state.layout.width,
                           backgroundColor:'rgba(0,0,0,0.7)',
+                          position:'absolute',
+                          bottom:this.props.barBottomPosition,
                           alignItems:'center',flexDirection:'row', justifyContent:'space-between'
                         }}>
               <TouchableHighlight onPress={()=>this.cancelHandler()}>
@@ -155,7 +159,7 @@ export default class Collection extends Component {
               </TouchableHighlight>
 
               <TouchableHighlight onPress={()=>this.doneHandler()}>
-                  <Image source={this.props.actions.done.icon} resizeMode='contain' style={{right:15,height:35}}/>
+                  <Image source={this.props.actions.done.icon} resizeMode='contain' style={{right:0,height:35}}/>
                 </TouchableHighlight>
 
             </View>
