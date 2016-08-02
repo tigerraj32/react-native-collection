@@ -76,6 +76,7 @@ export default class Collection extends Component {
   longPressHandler(obj: Object){
     //console.log('/*/*/*/*/ long tap SelectableList */*/*/*/ item: '+ obj);
     if (this.props.selectionMode) {
+      if(this.state.editMode) return;
       this.setState({
         editMode:!this.state.editMode,
       });
