@@ -15,7 +15,7 @@ import CellGrid from './cell-grid';
 import Strings from './strings';
 
 var {height, width} = Dimensions.get('window');
-
+var cellOffset = 0;
 
 export default class Collection extends Component {
 
@@ -90,10 +90,11 @@ export default class Collection extends Component {
     var selectedItems = this.state.selectedItems;
     const flag = selectedItems.indexOf(item)>=0?true:false;
     const id = this.props.dataSource.indexOf(item);
-    //console.log('/*/*/*/*/ SelectableList */*/*/*/ item: '+item);
+    console.log('/*/*/*/*/ SelectableList */*/*/*/ item: '+item);
 
     return (
-      <CellGrid item={item} key={id}
+      <CellGrid  cellOffset={cellOffset}
+                item={item} key={id}
                 onSelectItem={(obj)=>this.onSelectItem(obj)}
                 longPressHandler={(obj)=>this.longPressHandler(obj)}
                 component={Cell}
@@ -133,8 +134,10 @@ export default class Collection extends Component {
 
   render(){
 
-    //console.log('---------------' + JSON.stringify(this.props));
+    console.log('---------------' + JSON.stringify(this.props));
     const itemsPerRow = Math.floor(this.state.layout.width/this.props.cellSize.width);
+    cellOffset = Math.floor((this.state.layout.width - this.props.cellSize.width*itemsPerRow) / itemsPerRow);
+    console.log(' width: '+ this.state.layout.width + ' itemsPerRow: ' + itemsPerRow + ' cellSize: '+ JSON.stringify(this.props.cellSize) + ' cellOffset: ' + cellOffset);
     if (this.props.dataSource==null) throw new Error(Strings.DATA_SOURCE);
 
     return(
