@@ -24,8 +24,9 @@ export default class CellGrid extends Component {
 
   render(){
     const Cell = this.props.component;
+    const offset = this.props.cellOffset / 2
     return(
-      <View>
+      <View style={{marginLeft:offset, marginRight:offset, marginBottom:offset}}>
         <TouchableHighlight  onPress={this.onSelectItem} onLongPress={this.longPressHandler}  >
           <View>
             <Cell item={this.props.item}/>
