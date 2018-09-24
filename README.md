@@ -75,6 +75,7 @@ export default class Cell extends Component {
 }
 ```
 #Options
+
    Option   |   Description   |   Default Value   | required
    --- | --- | --- | ---
    component   |   Component to render each cell item  |   Rectangle box of 100*100 | required
